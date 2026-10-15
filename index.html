@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>MY Bab.</h1>
+        <a href="">Inicio</a>
+        <a href="">Productos</a>
+        <a href="">Categorias</a>
+        <a href="">Configuracion</a>
+    </nav>
+
+    <section class="seccion-main" id="seccion-main">
+        
+        <nav class="navbar-seccion">
+            
+            <div>
+                <h2>Gestor de Productos</h2>
+                <cite>Administra los Productos de tu tienda</cite>
+            </div>
+
+            <div>
+                <input type="text" name="" id="">
+                <button class="btn-add">+ Agregar producto</button>
+            </div>
+        </nav>
+
+        <article class="article-gestor">
+            <section class="productos">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Categoria</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                            <th id="total">total:</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="productos">
+                       
+                    </tbody>
+                </table>
+
+            </section>
+
+        </article>
+
+    </section>
+
+    <div class="contenedor-form">
+
+        <section id="form" class="form">
+
+            <h3>Agregar productos</h3>
+
+            <p>Nombre del producto</p>
+            <input type="text" value="" placeholder="Ej. Mouse Logitech" id="nombre-producto">
+
+            <p>Precio</p>
+            <input type="number" id="precio" min="0.01" step="0.01">
+
+            <p>Categoria</p>
+            <select id="categoria">
+                <option value="perifericos">Periféricos</option>
+                <option value="audio">Audio</option>
+                <option value="monitores">Monitores</option>
+                <option value="almacenamiento">Almacenamiento</option>
+                <option value="componentes">Componentes</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="smartphones">Smartphones</option>
+                <option value="tablets">Tablets</option>
+                <option value="smartwatches">Smartwatches</option>
+                <option value="gaming">Gaming</option>
+            </select>
+
+            <p>Estado</p>
+            <select name="Estado" id="estado">
+                <option value="disponible">Disponible</option>
+                <option value="agotado">Agotado</option>
+            </select>
+
+            <p>Imagen (URL)</p>
+            <input type="" value="" placeholder="https://ejemplo.com/imagen.jpg" id="url">
+
+            <button id="btn-form-add">Agregar producto</button>
+            <button id="btn-form-edit">Editar producto</button>
+
+        </section>
+
+    </div>
+
+    <div class="contenedor-acept">
+        <section class="acept">
+            <span>Eliminar producto?</span>
+            <cite>Esta accion no se puede dashacer</cite>
+            <button class="cancelar">Cancelar</button>
+            <button class="eliminar">Eliminar</button>
+        </section>
+    </div>
+
+</body>
+</html>
