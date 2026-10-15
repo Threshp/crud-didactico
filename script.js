@@ -10,7 +10,10 @@ const btnFormEdit = document.getElementById("btn-form-edit")
 const toggle = document.querySelector(".contenedor-form")
 const btnAdd = document.querySelector(".btn-add")
 const acept = document.querySelector(".acept")
- const contenedor = document.querySelector(".contenedor-acept")
+const contenedor = document.querySelector(".contenedor-acept")
+const btnBuscar = document.querySelector(".btn-busqueda")
+const input = document.getElementById("input-busqueda")
+
 let productoEditando = null;
 let idProductoEliminar = null;
 let countId = datos.length? Math.max(...datos.map(producto => Number(producto.id)))+1:1;
@@ -69,8 +72,22 @@ productos.addEventListener("click", (event) => {
     
 });
 
+btnBuscar.addEventListener("click", (event)=>{
+    if(!input) return;
+    busqueda(datos, input.value)
+})
 
+function busqueda (datos, input) {
+    if(!input)return;
+    const productoEncontrado = datos.filter(dato => dato.nombre.toLowerCase().includes(input.toLowerCase().trim()))
+    productos.innerHTML=""
+    console.log(productoEncontrado)
+    productoEncontrado.forEach(dato =>{
+        agregarProductos(dato)
+    })
+}
 function agregarProductos(datos) {
+
     const tr = document.createElement("tr")
     const img = document.createElement("img")
     const tdNombre = document.createElement("td")
